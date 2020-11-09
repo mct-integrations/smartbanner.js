@@ -1,5 +1,5 @@
 /*!
- * smartbanner.js v1.16.0 <https://github.com/ain/smartbanner.js>
+ * smartbanner.js v1.16.1 <https://github.com/ain/smartbanner.js#readme>
  * Copyright © 2020 Ain Tohvri, contributors. Licensed under GPL-3.0.
  */
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
@@ -16,9 +16,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Bakery =
-/*#__PURE__*/
-function () {
+var Bakery = /*#__PURE__*/function () {
   function Bakery() {
     _classCallCheck(this, Bakery);
   }
@@ -54,7 +52,7 @@ function () {
 exports["default"] = Bakery;
 
 },{}],2:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68,9 +66,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Detector =
-/*#__PURE__*/
-function () {
+var Detector = /*#__PURE__*/function () {
   function Detector() {
     _classCallCheck(this, Detector);
   }
@@ -107,7 +103,7 @@ function () {
 
 exports["default"] = Detector;
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],3:[function(require,module,exports){
 "use strict";
 
@@ -115,16 +111,9 @@ var _smartbanner = _interopRequireDefault(require("./smartbanner.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var smartbanner;
-window.addEventListener('load', function () {
-  smartbanner = new _smartbanner["default"]();
-
-  if (smartbanner.apiEnabled) {
-    window.smartbanner = smartbanner;
-  } else {
-    smartbanner.publish();
-  }
-});
+var smartbanner = new _smartbanner["default"]();
+window.smartbanner = smartbanner;
+!smartbanner.apiEnabled && smartbanner.publish();
 
 },{"./smartbanner.js":5}],4:[function(require,module,exports){
 "use strict";
@@ -155,9 +144,7 @@ function convertToCamelCase(name) {
   return parts.join('');
 }
 
-var OptionParser =
-/*#__PURE__*/
-function () {
+var OptionParser = /*#__PURE__*/function () {
   function OptionParser() {
     _classCallCheck(this, OptionParser);
   }
@@ -296,9 +283,7 @@ function restoreContentPosition() {
   }
 }
 
-var SmartBanner =
-/*#__PURE__*/
-function () {
+var SmartBanner = /*#__PURE__*/function () {
   function SmartBanner() {
     _classCallCheck(this, SmartBanner);
 
